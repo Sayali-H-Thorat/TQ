@@ -1,20 +1,45 @@
-package forloop;
-//Square of a number
-//1,4,9,16,25,36,49,64,81
-public class Demo 
+package SwitchCaseDemo;
+
+import java.util.Scanner;
+
+public class Demo
 {
-	public static void show(int terms)
+	public static void showDay(int day)
 	{
-		for(int i = 1; i<= terms; i++)
+		switch(day)
 		{
-			System.out.print(i*i+" ");
+		case 1:
+			   System.out.println("Monday");
+			   break;
+		case 2:
+			   System.out.println("Tuesday");
+			   break;
+		case 3:
+			   System.out.println("Wednesday");
+			   break;
+		case 4:
+			   System.out.println("Thursday");
+			   break;
+		case 5:
+			   System.out.println("Friday");
+			   break;
+		case 6:
+			   System.out.println("Saturday");
+			   break;
+		default:
+			   System.out.println("Wrong input..");
 		}
 	}
 
-	public static void main(String[] args) 
+	public static void main(String[] args)
 	{
-		show(9);
-	
+		Scanner sobj = new Scanner(System.in);
+		
+		System.out.println("Enter the day");
+		int day=sobj.nextInt();
+		
+		showDay(day);
+
 	}
 
 }
